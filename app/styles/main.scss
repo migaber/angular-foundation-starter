@@ -1,0 +1,152 @@
+// bower:scss
+@import "foundation-sites/scss/foundation.scss";
+// endbower
+
+@import "variables";
+// @import "utils";
+
+@include foundation-everything(true);
+
+ // fixed in version 6.2.3-rc2
+.top-bar {
+    .top-bar-right {
+        flex: 0 1 0px;
+    }
+
+    .menu {
+        .active > a {
+            border-radius: 2em;
+        }
+    }
+}
+
+.sidebar {
+    height: calc(100vh - 55px);
+    overflow: auto;
+    border-right: 1px solid #e2e2e2;
+}
+
+.users-list {
+    overflow: auto;
+}
+
+.preview {
+    height: 100%;
+    &__empty, &__container {
+        color : #d4d4d4;
+        align-items: center;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    &__container {
+        color: #000;
+    }
+}
+
+.profile {
+    &__avatar {
+        margin-bottom: 20px;
+    }
+    &__title {
+
+    }
+    &__info {
+        &__item {
+
+        }
+    }
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    &:hover {
+        background: #f1f1f1;
+        color: #ffffff;
+    }
+    .listItem__avatar {
+        margin-right: 0.6em;
+    }
+    .listItem__title {
+        flex: 1;
+    }
+}
+
+// utilities
+.u {
+    &-thumb {
+        height: auto;
+        &--30 {
+            width: 30px;
+        }
+        &--45 {
+            width: 45px;
+        }
+        &--60 {
+            width: 50px;
+        }
+        &--90 {
+            width: 50px;
+        }
+        &--200 {
+            width: 200px;
+        }
+        &--rounded {
+            border-radius: 50%;
+        }
+        &--bordered {
+            border: 1px solid #a3a3a3;
+            padding: 2px;
+        }
+    }
+    &-nopadding{
+        &--all {
+            padding: 0;
+        }
+        &--left{
+            padding-left: 0;
+        }
+        &--right{
+            padding-right: 0;
+        }
+        &--bottom{
+            padding-bottom: 0;
+        }
+        &--top{
+            padding-top: 0;
+        }
+    }
+    &-nomargin{
+        &--all {
+            margin: 0;
+        }
+        &--left{
+            margin-left: 0;
+        }
+        &--right{
+            margin-right: 0;
+        }
+        &--bottom{
+            margin-bottom: 0;
+        }
+        &--top{
+            margin-top: 0;
+        }
+    }
+    &-fontsize {
+        &--1x {
+            font-size: 1em;
+        }
+        &--2x {
+            font-size: 2em;
+        }
+        &--3x {
+            font-size: 3em;
+        }
+        &--4x {
+            font-size: 4em;
+        }
+    }
+}
